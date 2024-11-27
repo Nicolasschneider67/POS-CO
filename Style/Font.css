@@ -1,0 +1,22 @@
+
+@font-face {                                            /*  Police pour le logo + barre Nav  */  
+    font-family: 'designer';
+    src: url('../police/designer/DESIGNER.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'akilvan';                            /*    Polcie pour les petits titres   */
+    src: url('../police/akilvan/Akilvan.otf') format('truetype');
+}
+
+
+@font-face{                                            /*  Police pour le texte  */
+    font-family: 'butler';
+    src : url('../police/butler/Butler_Bold.otf') format('truetype');
+    font-weight: bold; 
+    font-style: normal;
+    font-family: 'butler';
+    src : url('../police/butler/Butler_Regular.otf') format('truetype');
+}
+  
+

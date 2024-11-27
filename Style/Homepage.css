@@ -1,0 +1,95 @@
+
+                                            /*  Page d'accueil   */
+
+html, body {     /* On supprime les marges blanches */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#accueil_main {
+    z-index: -1;
+    position: absolute;
+    background-image: url('../Image/fond_brouillard.png');
+    background-repeat: no-repeat; /* Pas de répétition */
+    background-position: center; /* Centrer l’image */
+    background-attachment: fixed; /* L’image reste fixe en scrollant */
+    background-size: cover; /* L'image occupe tout l'espace */
+    overflow: hidden; /* Empêche de dépasser les bords */
+    width: 100vw; /* Largeur : 100% de la fenêtre */
+    height: 100vh; /* Hauteur : 100% de la fenêtre */
+    filter: blur(2px) brightness(20%);
+}
+
+
+
+                                        /*    Partie du Logo principal   */
+
+.Card_Logo {
+    display: flex; /* Active le mode Flexbox */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 100vh; /* Hauteur de la page entière */
+}
+
+.P_Logo, .S_Logo, .And_Logo, .CO_Logo {
+    font-size: 125px;
+    -webkit-text-stroke: 5 px rgb(0, 0, 3);
+    font-family: 'designer', sans-serif;
+    color: #b6ffffff; /* Couleur principale (turquoise) */
+    text-shadow: 0 0 5px #0a00f0e3, /* Halo de faible intensité */
+                 0 0 10px #0a00f0e3, /* Halo moyen */
+                 0 0 20px #0a00f0e3, /* Halo large */
+                 0 0 40px #1f14f0aa, /* Couleur secondaire */
+                 0 0 60px #1f14f0aa, /* Couleur secondaire */
+                 0 0 80px #1f14f0aa, /* Couleur secondaire intense */
+                 0 0 120px #1f14f0aa;
+}
+
+.And_Logo {
+    font-size: 100px;
+    padding-top: 10px;
+}
+
+.Img_Logo {
+    display: flex;
+    margin: -95px;
+    height: 280px;
+}
+
+.Phrase_Accroche {
+    display: flex;
+    justify-content: center;
+    margin: -37vh 50vh 0px 50vh;
+    white-space: nowrap;
+    font-family: 'designer', sans-serif;
+    color: white;
+    font-size: 50px;
+    -webkit-text-stroke: 0.6px rgb(0, 0, 3);
+    text-shadow: 0 0 5px #d1c7c7e3, 
+                 0 0 10px #ffffffe3, 
+                 0 0 20px #ffffffe3, 
+                 0 0 40px #cecdddaa, 
+                 0 0 60px #cecdddaa;
+    animation: HalloNeon 2s infinite alternate; /* Animation clignotante */ 
+                 
+}
+
+@keyframes HalloNeon {
+    0% {
+        text-shadow: 
+            0 0 5px #d1c7c7e3, 
+            0 0 10px #d1c7c7e3, 
+            0 0 20px #ffffff; /* Intensité faible */
+    }
+ 
+    100% {
+        text-shadow: 
+            0 0 15px #d1c7c7e3, 
+            0 0 30px #ffffff, 
+            0 0 60px #ffffff; /* Intensité maximale */
+    }
+}
