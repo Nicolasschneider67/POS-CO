@@ -1,0 +1,247 @@
+
+#Pos_Collaboration{
+    margin: 0;
+    width: 100%;
+    padding-top: 35px;
+    background-image: url('../Image/fond_brouillard1.png');
+    background-repeat: no-repeat; /* Pas de répétition */
+    background-position: center; /* Centrer l’image */
+    background-attachment: fixed; /* L’image reste fixe en scrollant */
+    background-size: cover; /* L'image occupe tout l'espace */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: absolute;         /* On ajoute ces variables pour l'animation */
+    top: 250%;
+    content-visibility: hidden;
+}
+
+/******************************************************   Pour l'animation au clic    *******************************************************/
+
+#Pos_Collaboration.visible {
+    position: absolute;
+    top: 18%;
+    content-visibility : visible;
+    transition: top 2s cubic-bezier(0, 0.95, 0.43, 0.98);
+    padding-top: 70px;
+}
+
+/************************************************************************************************************************************************/
+
+.Card_Collaboration_Container, .Card_Collaboration_Return {
+    width: 400px; /* Largeur de la carte */
+    height: 230px; /* S'ajuste à la taille du contenu */
+    perspective: 1000px; /* Ajoute une perspective pour l'effet 3D */
+    color: white;
+    font-family: 'jost', sans-serif, Times, serif;
+    font-size: 17px;
+    border-radius: 7px;
+    padding: 20px;
+    background-color: rgb(14, 13, 13);
+}
+
+.Card_Collaboration_Container {     /* Pour mettre une marge entre les cards sans que la return ne soit affectée  */
+    margin: 15px; 
+    box-shadow:0px 0px 10px 2px #00ff2a;
+    margin-bottom: 30px;
+}  
+
+.Card_Collaboration_Container:hover {
+    cursor: pointer;
+    box-shadow:0px 0px 10px 2px white;
+}
+
+.Card_Collaboration, .Card_Collaboration_Return {
+    width: 400px; /* Largeur de la carte */
+    height: 230px; /* S'ajuste à la taille du contenu */
+    backface-visibility: hidden; /* Cache l’autre face quand non visible */
+    transition: transform 0.6s ease-in-out; /* Animation fluide */
+}
+
+.Card_Tittle_Collaboration {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'good_time', sans-serif, Times, serif;
+    font-size: 17px;
+    color:white; 
+}
+/****************************************************     Les icônes des différentes entreprises    *******************************************************************/
+
+.Icon_Plus {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.Icon_Collaboration {                         
+    width: 130px;
+    object-fit: contain;
+}
+
+#logo_dimo {        /*  A cause de la différence des logo il faut faire des ajustements manuels   */
+    width: 175px;
+    margin-top: -56px;
+    margin-right: -30px;
+    margin-bottom: -55px;
+}
+
+#logo_BMW {
+    width: 95px;
+}
+
+#logo_Audio {
+    width: 70px;
+    border-radius: 10%;
+}
+
+#logo_LEADEO {
+    width: 170px;
+    filter: brightness(2.4);
+    margin-top: -8px;
+}
+
+#logo_CIC {
+    width: 70px;
+}
+
+
+
+
+
+     /***************************************             Partie de l'animation     *************************************/
+.Card_Collaboration_Return { position: absolute; top:0%; left: 0%;}   /* Afin que l'autre case derrière soit tout à fait derrière  */
+
+.Card_Collaboration_Container {
+    transform: rotateY(0deg); /* Face avant */
+}
+
+.Card_Collaboration_Container .Card_Collaboration_Return {
+    transform: rotateY(180deg); /* Face arrière */
+}
+
+.Card_Collaboration_Container.flipped .Card_Collaboration {
+    transform: rotateY(-180deg); /* Retourne la face avant */
+}
+.Card_Collaboration_Container.flipped .Card_Collaboration_Return {
+    transform: rotateY(0deg); /* Montre la face arrière */
+}
+
+.Card_Collaboration_Container.DIMO #Collab_Dimo {
+    transform: rotateY(-180deg); /* Retourne la face avant */
+}
+.Card_Collaboration_Container.DIMO #return_Dimo {
+    transform: rotateY(0deg); /* Retourne la face avant */
+}
+
+.Card_Collaboration_Container.BMW #Collab_BMW {
+    transform: rotateY(-180deg); /* Retourne la face avant */
+}
+.Card_Collaboration_Container.BMW #return_BMW {
+    transform: rotateY(0deg); /* Retourne la face avant */
+}
+
+.Card_Collaboration_Container.Audio #Collab_Audio {
+    transform: rotateY(-180deg); /* Retourne la face avant */
+}
+.Card_Collaboration_Container.Audio #return_Audio {
+    transform: rotateY(0deg); /* Retourne la face avant */
+}
+
+.Card_Collaboration_Container.LEADEO #Collab_LEADEO {
+    transform: rotateY(-180deg); /* Retourne la face avant */
+}
+.Card_Collaboration_Container.LEADEO #return_LEADEO {
+    transform: rotateY(0deg); /* Retourne la face avant */
+}
+
+.Card_Collaboration_Container.CIC #Collab_CIC {
+    transform: rotateY(-180deg); /* Retourne la face avant */
+}
+.Card_Collaboration_Container.CIC #return_CIC {
+    transform: rotateY(0deg); /* Retourne la face avant */
+}
+
+
+/*******************************************************************************************************************************/
+
+/************************************************   Responsive Design pour petit écran ordinateur   **********************************/
+
+@media only screen and (max-width: 1040px) {
+#Pos_Collaboration {top:250%;}
+#Pos_Collaboration.visible {transition: top 2s cubic-bezier(0, 0.79, 0.43, 0.98);}
+
+.Card_Collaboration_Container, .Card_Collaboration_Return {
+    font-size: 16px;
+    width: 360px;
+    padding-top: 10px;
+}
+.Card_Collaboration {width:auto;}
+
+.Icon_Collaboration {width: 110px}
+#logo_dimo {width:155px}
+#logo_BMW {width:75px}
+#logo_Audio {width:55px}
+#logo_LEADEO {width:150px}
+#logo_CIC  {width:55px}
+}
+
+/**********************************************************************************************************************************/
+@media only screen and (max-width: 859px) {
+
+#Pos_Collaboration.visible {padding-top: 70px}
+.Card_Collaboration_Container, .Card_Collaboration_Return {
+    font-size: 15px;
+    width: 450px;
+    height: 180px;
+}
+
+.Card_Tittle_Collaboration {font-size: 15px;}
+
+body {overflow-x: hidden}
+}
+
+/*******************************************************************************************************************/
+@media only screen and (max-width: 670px) {
+
+#Pos_Collaboration.visible {
+    top: 15%;
+    padding-top: 0px;
+}
+
+.Card_Tittle_Collaboration {font-size: 14px;}
+}
+
+/*******************************************************************************************************************/
+@media only screen and (max-width: 519px) {
+
+.Card_Collaboration_Container, .Card_Collaboration_Return {
+    font-size: 14px;
+    width: auto;
+}
+
+.Card_Collaboration_Return p { 
+    margin-top: 0px;
+    padding-top: 10px;
+}
+}
+/*******************************************************************************************************************/
+@media only screen and (max-width: 439px) {
+
+#Pos_Collaboration.visible {top: 12%;}
+
+.Card_Tittle_Collaboration {font-size: 13px;}
+}
+
+/*******************************************************************************************************************/
+@media only screen and (max-width: 400px) {
+    
+.Card_Collaboration_Container, .Card_Collaboration_Return {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+}
+

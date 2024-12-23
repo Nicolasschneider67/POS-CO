@@ -1,0 +1,417 @@
+
+                                            /*  Page d'accueil   */
+
+html, body {     /* On supprime les marges blanches */
+    box-sizing: border-box;
+    margin: 0; /* Pour le responsive on centre l'image */;
+    padding: 0;
+    height: 100%; /*   On donne une hauteur max pour le défilement des cards au clic  */
+    background-image: url('../Image/fond_brouillard1.png');
+    background-repeat: no-repeat; /* Pas de répétition */
+    background-position: center; /* Centrer l’image */
+    background-attachment: fixed; /* L’image reste fixe en scrollant */
+    background-size: cover; /* L'image occupe tout l'espace */
+    overflow: hidden;
+}
+
+#Pos_accueil {   /* On prend toute la page  */
+    position: relative;
+    height: 100vh; /* Assure que la page occupe tout l'écran */
+    overflow: hidden;
+}
+
+.accueil_main {     /*   L'image de fond    */
+    z-index: -1;
+    position: absolute;
+    outline: 3px solid black;
+}
+
+                                        /*      Barre de navigation      */
+.Nav_Acceuil {
+    font-family: 'designer', sans-serif, Times, serif;
+    color: white;
+    font-size: 30px;
+    display: flex;   /* On les aligne horizontalement avec un espace commun entre chaque */
+    align-items: center;
+    justify-content: space-around;
+          /*   Sert à laisser la nav toujours en évidence malgrès la superposition des cards  */   
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+                                        /*   les effets de survol de la barre    */
+.Portrait:hover {
+    cursor: pointer;
+    -webkit-text-stroke: 5 px rgb(0, 0, 3);
+    color: #b6ffffff; 
+    text-shadow: 0 0 5px #0a00f0e3, 
+                 0 0 10px #0a00f0e3, 
+                 0 0 20px #0a00f0e3, 
+                 0 0 40px #1f14f0aa,               
+                 0 0 120px #1f14f0aa;
+    transform: scale(1.5);
+}
+
+/******************************************************   Balise pour l'animation du clic  ********************************************/
+
+.Portrait.visible {
+    transition: text-shadow 2.5s cubic-bezier(0, 0, 0.43, 0.98);
+    text-shadow: 0 0 5px #40F6E2, 
+                 0 0 10px #40F6E2, 
+                 0 0 20px #40F6E2, 
+                 0 0 30px #27d3bf;               
+    transform: scale(1.5);
+}
+
+.Collaboration.visible {
+    transition: text-shadow 2.5s cubic-bezier(0, 0, 0.43, 0.98);
+    text-shadow: 0 0 5px #03a803, 
+                 0 0 10px #089b28, 
+                 0 0 20px #039e03, 
+                 0 0 30px #05c405;                  
+    transform: scale(1.5);
+}
+
+.Contact.visible {
+    transition: text-shadow 2.5s cubic-bezier(0, 0, 0.43, 0.98);
+    text-shadow: 0 0 5px #ff7519, 
+                 0 0 10px #ff7519, 
+                 0 0 20px #ff7519, 
+                 0 0 40px #ff7519,
+                 0 0 120px #e96610;     
+    transform: scale(1.5);
+}
+
+/**************************************************************************************************************************************/
+
+.Collaboration:hover {
+    cursor: pointer;
+    -webkit-text-stroke: 5 px rgb(0, 0, 3);
+    color: rgb(240, 255, 241); 
+    text-shadow: 0 0 5px #00c40ae3, 
+                 0 0 10px #00c40ae3, 
+                 0 0 20px #00c40ae3, 
+                 0 0 40px #04ca04aa;            
+    transform: scale(1.5);
+}
+
+.Contact:hover {
+    cursor: pointer;
+    -webkit-text-stroke: 5 px rgb(0, 0, 3);
+    color: rgb(255, 243, 236); 
+    text-shadow: 0 0 5px #ff7519, 
+                 0 0 10px #ff7519, 
+                 0 0 20px #ff7519, 
+                 0 0 40px #ff7519,
+                 0 0 120px #e96610;             
+    transform: scale(1.5);
+}
+
+
+/***********************************************************************************************************************************/
+
+
+
+                                        /*    Partie du Logo principal   */
+
+.Card_Logo {
+    display: flex; /* Active le mode Flexbox */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 70vh; 
+}
+
+.P_Logo, .S_Logo, .And_Logo, .CO_Logo {
+    font-size: 135px;
+    -webkit-text-stroke: 5 px rgb(0, 0, 3);
+    font-family: 'designer', sans-serif, Times, serif;
+    color: #b6ffffff; /* Couleur principale (turquoise) */
+    text-shadow: 0 0 5px #0a00f0e3, /* Halo de faible intensité */
+                 0 0 10px #0a00f0e3, /* Halo moyen */
+                 0 0 20px #0a00f0e3, /* Halo large */
+                 0 0 40px #1f14f0aa, /* Couleur secondaire */
+                 0 0 60px #1f14f0aa, /* Couleur secondaire */
+                 0 0 80px #1f14f0aa, /* Couleur secondaire intense */
+                 0 0 120px #1f14f0aa;
+}
+
+.And_Logo {
+    font-size: 100px;
+    padding-top: 10px;
+}
+
+.Img_Logo, .Img_Logo_Green, .Img_Logo_Orange {   /*  Image du logo  */
+    display: flex;
+    margin: -115px;
+    height: 340px;
+}
+
+.Phrase_Accroche {
+    display: flex;
+    justify-content: center;
+    margin: -17vh 50vh 0px 50vh;
+    white-space: nowrap;
+    font-family: 'designer', sans-serif, Times, serif;
+    color: white;
+    font-size: 50px;
+    -webkit-text-stroke: 0.6px rgb(0, 0, 3);
+    text-shadow: 0 0 5px #d1c7c7e3, 
+                 0 0 10px #ffffffe3, 
+                 0 0 20px #ffffffe3, 
+                 0 0 40px #cecdddaa, 
+                 0 0 60px #cecdddaa;
+    animation: HalloNeon 2s infinite alternate; /* Animation clignotante */ 
+                 
+}
+
+@keyframes HalloNeon {
+    0% {
+        text-shadow: 
+            0 0 5px #d1c7c7e3, 
+            0 0 10px #d1c7c7e3, 
+            0 0 20px #ffffff; /* Intensité faible */
+    }
+ 
+    100% {
+        text-shadow: 
+            0 0 15px #d1c7c7e3, 
+            0 0 30px #ffffff, 
+            0 0 60px #ffffff; /* Intensité maximale */
+    }
+}
+
+
+/****************************************************   Case de contact    ************************************************************/
+
+#contact_Info {
+    color: white;
+    font-family: 'jost', sans-serif, Times, serif;
+    font-size: 18px;
+    display: grid;
+    justify-items: center;
+    background-color: rgb(14, 13, 13);
+    margin-top: 45px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 13px 6px #ff7519;
+    border-radius: 15px;
+    opacity: 0;
+    visibility: hidden; /* Masque visuellement sans affecter la transition */
+    transition: opacity 1.5s ease-in-out .5s, visibility 1.5s ease-in-out 0s;
+    
+}
+
+#contact_Info.visible {    /* Pour l'effet au clic de la balise contact  */
+    opacity: 1;
+    visibility: visible; /* Restaure la visibilité */
+}
+
+#contact_Puce {
+    list-style: none; /* Supprime les puces par défaut */
+    margin-top: -15px;
+}
+
+#contact_Puce li { line-height: 50px; }
+
+#contact_Call {
+    width: 25px;
+    transform: translateY(5px); /* Pour l'alignement vertical */
+    margin-right: 15px;
+}
+
+#contact_Mail {
+    width: 40px;
+    transform: translateY(5px); /* Pour l'alignement vertical */
+    margin-right: 15px;
+    margin-left: -12px;
+
+}
+
+#contact_Pdf {
+    width: 25px;
+    transform: translateY(8px);
+    margin-right: 15px;
+    padding-left: 5px;
+}
+
+li a {color: #ff7519}
+li a:hover {cursor: pointer}
+
+                    /***********************************************************************************************/
+
+
+                    /******************************  Responsive design pour la partie téléphone  *******************/
+
+@media only screen and (max-width: 1040px) {
+body { 
+    background-size: contain; 
+    background-color: black;
+}
+
+.Card_Logo {height: 65vh;}
+    
+.P_Logo, .S_Logo, .CO_Logo {font-size: 100px;}
+.P_Logo {margin-right: 30px;}
+.S_Logo {margin-left: 30px; }
+.And_Logo {font-size: 70px; padding-top: 10px;}
+
+.Img_Logo, .Img_Logo_Green, .Img_Logo_Orange, #targetLogo {   
+    width: 260px;
+    height: 260px;
+}
+
+.Phrase_Accroche {
+    font-size: 45px;
+    margin-top: -130px;
+}
+
+.Nav_Acceuil {font-size: 30px;}
+
+#contact_Info {
+    font-size: 19px;
+    margin-top: 90px;
+}
+
+#contact_Puce li { line-height: 50px; }
+
+#contact_Call {width: 25px}
+
+#contact_Mail {
+    width: 35px;
+    transform: translateY(4px);
+    margin-left: -9px;;
+}
+}
+
+/**************************************************************************************************************************************************/
+
+@media only screen and (max-width: 770px) {
+    .Phrase_Accroche {font-size: 40px;
+        margin-left: 0px;
+        margin-right: 0px; }
+}
+
+/*************************************************************************************************************************/
+                    /***************************  Responsive design pour petits téléphones    ****************************/
+@media only screen and (max-width: 670px) {
+body { /* Pour décaler l'image de fond vers le haut */
+    background-position: center 190px;
+    background-repeat: repeat;
+} 
+
+.Nav_Acceuil {
+    font-size: 20px;
+ 
+    top: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.Phrase_Accroche {
+    font-size: 35px; 
+}
+
+#contact_Info {
+    font-size: 18px;
+    margin-top: 90px;
+}
+
+#contact_Puce li { line-height: 35px; }
+
+#contact_Call {
+    width: 20px;
+    transform: translateY(5px);
+}
+
+#contact_Mail {width: 30px;}
+}
+#contact_Pdf {
+    width: 20px;
+    padding-left: 0px; 
+}
+
+/******************************************************************************************************************************/
+
+
+@media only screen and (max-width: 530px) {
+.Img_Logo, .Img_Logo_Green, .Img_Logo_Orange, #targetLogo {
+    width: 260px;
+    height: 260px;
+}
+
+.P_Logo, .S_Logo, .CO_Logo {font-size: 100px;}
+.P_Logo {margin-right: 30px;}
+.S_Logo {margin-left: 30px; }
+.And_Logo {
+    font-size: 65px;
+    padding-top: 0px;
+}
+
+.Phrase_Accroche {
+    font-size: 30px;
+    margin-top: -110px;
+}
+
+#contact_Info {font-size: 17px;}
+
+#contact_Info p {margin-bottom: 30px;}
+
+#contact_Puce li { line-height: 35px; }
+
+#contact_Call {
+    width: 18px;
+    transform: translateY(5px);
+}
+
+#contact_Mail {
+    width: 25px;
+    transform: translateY(2px);
+    margin-left: -5px;
+}
+
+#contact_Info {
+    max-width: 300px;
+}
+#contact_Pdf {padding-left: 2px;}}
+
+
+/********************************************************************************************************************************/
+
+@media only screen and (max-width: 440px) {
+.Nav_Acceuil {font-size: 17px;}
+
+.Phrase_Accroche {
+    font-size: 25px;
+}
+
+.P_Logo {
+    font-size: 80px;
+    margin-right: 50px;
+}
+.CO_Logo {font-size: 80px;}
+.S_Logo {
+    font-size: 80px;
+    margin-left: 50px;
+}
+
+.And_Logo {font-size: 50px;}
+
+.Img_Logo, .Img_Logo_Green, .Img_Logo_Orange, #targetLogo {
+    width: 200px;
+    height: 200px;
+}
+
+.Portrait:hover, .Portrait.visible, .Collaboration:hover, .Collaboration.visible, .Contact:hover, .Contact.visible {
+    transform: scale(1);
+}
+
+#contact_Pdf {width:18px;}}
+
+/****************************************************************************************************************************************/
+
+@media only screen and (max-width: 360px) {
+.Phrase_Accroche {
+    font-size: 20px;
+}
+}

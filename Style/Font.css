@@ -1,0 +1,20 @@
+
+@font-face {                                            /*  Police pour le logo + barre Nav  */  
+    font-family: 'designer';
+    src: url('../police/designer/DESIGNER.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'good_time';                            /*    Polcie pour les petits titres   */
+    src: url('../police/good_times/Good\ Times\ Rg.otf') format('truetype');
+}
+
+
+@font-face{                                            /*  Police pour le texte  */
+    font-family: 'jost';
+    src : url('../police/jost/Jost-300-Light.otf') format('truetype');
+    font-weight: bold; 
+    font-style: normal;
+}
+  
+

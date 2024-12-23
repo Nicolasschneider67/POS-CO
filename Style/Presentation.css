@@ -1,0 +1,331 @@
+                                    /*    Page de présentation de la société    */
+
+
+                                    /*  Design de la page   */
+#Pos_Presentation {
+    top: 110%;
+    width: 80%;                      /* Important pour qu'à l'animation on ne voit pas le logo en fond */
+    background-image: url('../Image/fond_brouillard1.png');
+    background-repeat: no-repeat; /* Pas de répétition */
+    background-position: center; /* Centrer l’image */
+    background-attachment: fixed; /* L’image reste fixe en scrollant */
+    background-size: cover; /* L'image occupe tout l'espace */
+    display: flex;
+    margin-left: 3%;
+    transition: top 2.2s cubic-bezier(0, 0, 0.43, 0.98);
+    visibility: hidden;
+}
+
+            /**************************  Card pour l'animation au clic de l'icône ****************************/
+#Pos_Presentation.visible {
+    position: absolute;
+    top: 15%;
+    visibility : visible;
+    padding-top: 90px;
+}
+                                /*************************************************/
+
+
+#test_presentation {
+    max-width: 800px;
+    margin-right: 25px;
+}
+
+
+                                    /*   Caractéristiques des cardes   */
+#Partenaire_Resussite, #Toujours_Loin, #Ecouter_Convaincre {   
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 40px;
+    background-color: rgb(14, 13, 13);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 2px;
+    text-align: justify;
+    border-radius: 7px;
+    box-shadow: 0px 0px 11px 2px #40F6E2;
+}
+
+                                    /*  Le texte de la page  */
+#Pos_Presentation p {
+    color: white;
+    font-family: 'jost', sans-serif, Times, serif;
+    font-size: 17px;
+    text-align: justify;
+}
+
+                                    /*   Les titres    */
+h1 {
+    font-family: 'good_time', sans-serif, Times, serif;
+    font-size: 19px;
+    padding-top: 15px;
+    color: #40F6E2;
+}
+
+                                    /*  Photo de profil  */
+.reception_photo-icon {
+    width: 300px;
+    height: 400px;
+    left: 130px;
+    position: relative;
+    margin-top: 12vh;  
+    border-radius: 8px;
+    box-shadow: 1px 1px 8px 5px #40F6E2;
+    opacity: 0;
+}
+
+.reception_photo-icon.visible {
+    opacity: 1;
+    transition: opacity 2.5s cubic-bezier(0, 0, 0.97, 1.01) 2.4s;
+
+}
+
+#Photo_Profil {
+    width: 300px;
+    height: 400px;
+    object-fit: cover; /* Ajuste l’image sans déformer */
+    border-radius: 8px;
+}
+
+
+
+
+                                /******************    Partie Profil  *******************/
+                                
+                /*****************  Disposition des card et du texte à l'intérieur   *******************/
+.Card_Profil_Identite, .Card_Profil_Diplome, .Card_Profil_Voyage, .Card_Profil_Musique, .Card_Profil_Sport, .Card_Profil_Annexe {
+    background-color: rgb(14, 13, 13);
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    width: 260px;
+    border-radius: 8px 8px 8px 8px; 
+    margin-top: -400px;
+    height: 390px;
+    display: none;
+    flex-direction: column;
+}
+
+                    /******************************************************************************************************************/
+
+.Profil_Ul{
+    list-style-type: none;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'jost', sans-serif, Times, serif;
+   
+} 
+
+                                /*  Les icônes  */
+#Card_Profil-Agencement {
+    width: 60px;
+    height: 640px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+
+#icon_Profil, #icon_Voyage, #icon_Diplom, #icon_Musique, #icon_Zen {height: 60px;}
+#icon_Profil:hover, #icon_Voyage:hover, #icon_Diplom:hover, #icon_Musique:hover, #icon_Zen:hover, #icon_Sport:hover {cursor: pointer; filter: brightness(4);}
+#icon_Musique {height: 95px; width: 55px;}
+#icon_Profil {height: 65px; width: 65px;}
+#icon_Diplom {height: 65px; width: 65px;}
+#icon_Voyage {height: 100px; width: 75px; margin-top: -15px; margin-bottom: -15px;}
+#icon_Zen {height: 55px;}
+
+
+                                /*  Texte dans les Cards  */                               
+
+.Profil__Tittle {
+    color: white;
+    font-family: 'good_time', sans-serif, Times, serif;
+    font-size: 19px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Profil_Ul li{
+    padding-bottom: 9px;
+}
+
+                                /*  Partie téléchargement CV  */
+
+#card_Dowload_CV {
+    position: absolute;
+    bottom: -60px;
+    left: 40px;
+}
+
+#card_Dowload_CV a {
+    font-size: 19px;
+    color: #40F6E2
+}
+
+/*******************************************************************************************************************************/
+
+/************************************************   Responsive Design   **********************************/
+@media only screen and (max-width: 1040px) {
+    
+#Pos_Presentation { 
+    flex-direction: column;
+}
+#Pos_Presentation.visible {
+    margin-left: 0px;
+    width: 100%;
+}
+#test_presentation {
+    margin-right: auto;
+    margin-left: auto;
+}
+#test_presentation p {font-size: 16px;}
+#test_presentation h1 {font-size: 18px;}
+
+#Partenaire_Resussite, #Toujours_Loin, #Ecouter_Convaincre {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.reception_photo-icon.visible {
+    margin-top: 0px;
+    margin-top: 0px;
+    top: 62%;
+    position: absolute;
+    left: 250px;
+}
+
+#Card_Profil-Agencement {
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 8%;
+}
+#icon_Profil, #icon_Voyage, #icon_Diplom, #icon_Musique, #icon_Zen {transform: scale(0.9);}
+#Card_Profil-Agencement {height: 580px;}
+#icon_Sport {
+    width: 65px;
+    height: 65px;
+}
+#icon_Musique {
+    height: 85px;
+    width: 55px;
+    transform: translateY(-10px);
+}
+#icon_Zen {height: 60px; width: 60px;}
+#icon_Voyage {
+    height: 110px;
+    width: 85px;
+}}
+
+#card_Dowload_CV {
+    bottom: -75px;
+    left: 30px;
+    font-size: 16px;
+}
+
+#card_Dowload_CV a {font-size:17px}
+
+/*******************************************************************************************************************************/
+@media only screen and (max-width: 840px) { 
+
+#Pos_Presentation.visible {padding-top: 70px;}
+
+#test_presentation {
+    max-width: 100%;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.Card_Profil_Identite, .Card_Profil_Diplome, .Card_Profil_Voyage, .Card_Profil_Musique, .Card_Profil_Sport, .Card_Profil_Annexe {
+    justify-content: center;
+    font-size: 20px;
+    align-items: center;
+}
+
+.reception_photo-icon.visible {
+    transform: scale(0.9);
+    left: 180;
+    position: relative;
+    top: -500px;
+}
+
+
+#card_Dowload_CV {bottom: 340px}}
+
+
+/*******************************************************************************************************************************/
+@media only screen and (max-width: 768px) {
+
+#Pos_Presentation.visible {padding-top: 50px;}
+
+#test_presentation p {font-size: 15px;}
+#test_presentation h1 {font-size: 17px;}
+
+#Card_Profil-Agencement {
+    height: 500px;
+}
+#icon_Profil, #icon_Voyage, #icon_Diplom, #icon_Musique, #icon_Zen, #icon_Sport {transform: scale(0.8);}
+
+.reception_photo-icon.visible {
+    transform: scale(0.8);
+    top: -450px;
+}
+
+#card_Dowload_CV p {font-size: 15px}
+#card_Dowload_CV a {font-size: 16px}
+}
+
+/*******************************************************************************************************************************/
+@media only screen and (max-width: 670px) {
+
+#Pos_Presentation.visible {padding-top: 0px;}
+
+#card_Dowload_CV {bottom: 310px; margin-right: 20px;}}
+
+/*******************************************************************************************************************************/
+@media only screen and (max-width: 573px) {
+
+#test_presentation h1 {font-size: 16px;}}
+
+/*******************************************************************************************************************************/
+@media only screen and (max-width: 544px) {
+
+.reception_photo-icon.visible {
+    top: -520px;
+    left: 150px;
+}}
+
+/*******************************************************************************************************************************/
+@media only screen and (max-width: 480px) {
+
+#test_presentation p {font-size: 14px;}
+#test_presentation h1 {font-size: 12px;}
+
+#icon_Profil, #icon_Voyage, #icon_Diplom, #icon_Musique, #icon_Zen, #icon_Sport {transform: scale(0.68);}
+
+#Card_Profil-Agencement {height: 440px;}
+
+.reception_photo-icon.visible {
+    top: -505px;
+    left: 100px;
+    transform: scale(0.6);
+}
+.Card_Profil_Diplome {font-size: 21px;}
+
+#card_Dowload_CV p {font-size: 14px;}
+#card_Dowload_CV a {font-size: 15px;}}
+
+/*******************************************************************************************************************************/
+@media only screen and (max-width: 382px) {
+
+#icon_Profil, #icon_Voyage, #icon_Diplom, #icon_Musique, #icon_Zen, #icon_Sport {transform: scale(0.6);}
+
+#Card_Profil-Agencement {height: 400px; margin-left:10px;}
+
+.reception_photo-icon.visible {
+    top: -465px;
+    left: 40px;
+}}
