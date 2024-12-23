@@ -57,6 +57,10 @@ textHover.addEventListener("mouseover", () => {             // Ajoute un événe
         targetImage.style.width = '180px';
         targetImage.style.height = '180px';
     }
+  else {
+        targetImage.style.width = '200px';
+        targetImage.style.height = '200px';
+    }
 
    
 });
