@@ -9,9 +9,9 @@ window.onload = function() {                            // On recharge la page a
     }
 };       
 
-/*window.addEventListener('resize', function() {         // On refresh quand la largeur de l'écran change
+window.addEventListener('resize', function() {         // On refresh quand la largeur de l'écran change
     window.location.reload();
-});/*
+});
 
                         /*   Effet de survol de la souris pour changer la couleur du logo et de la police  */
 
