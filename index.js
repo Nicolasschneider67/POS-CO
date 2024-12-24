@@ -131,7 +131,7 @@ textHover.addEventListener('mouseout', () => {
 const textHoverOrange = document.querySelector('.Contact')
 const orangeStyles = {
     color: 'rgb(255, 243, 236)',
-    textShadow: '0 0 5px #ff7519, 0 0 10px #ff7519, 0 0 20px #ff7519, 0 0 40px #ff7519, 0 0 120px #e96610'      
+    textShadow: '0 0 5px #ff7519, 0 0 10px #ff7519, 0 0 20px #ff7519, 0 0 40px #ff7519, 0 0 120px #ff7519'      
 };
 textHoverOrange.addEventListener('mouseover', () => {
     letters.forEach(text => {
