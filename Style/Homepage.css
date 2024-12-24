@@ -147,7 +147,8 @@ html, body {     /* On supprime les marges blanches */
   padding-bottom: 15px;
 }
 @media only screen and (max-width: 440px) {
-  .Img_Logo, .Img_Logo_Green, .Img_Logo_Orange { padding-bottom: 15px;}
+  .Img_Logo, .Img_Logo_Orange {padding-bottom: 15px;}
+  .Img_Logo_Green {padding-bottom: 10px;}
 }
 
 .Phrase_Accroche {
