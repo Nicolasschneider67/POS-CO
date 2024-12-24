@@ -413,5 +413,5 @@ body { /* Pour décaler l'image de fond vers le haut */
 @media only screen and (max-width: 360px) {
 .Phrase_Accroche {
     font-size: 20px;
-}
+    margin-top: -150px;}
 }
