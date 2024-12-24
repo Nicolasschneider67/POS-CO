@@ -199,12 +199,11 @@ h1 {
 }
 
 #Card_Profil-Agencement {
-    width: 100%;
+    height: 580px;
     margin-top: 0px;
     margin-left: 8%;
 }
 #icon_Profil, #icon_Voyage, #icon_Diplom, #icon_Musique, #icon_Zen {transform: scale(0.9);}
-#Card_Profil-Agencement {height: 580px;}
 #icon_Sport {
     width: 65px;
     height: 65px;
