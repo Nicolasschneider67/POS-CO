@@ -8,10 +8,10 @@ window.onload = function() {                            // On recharge la page a
         localStorage.removeItem('hasRefreshed');
     }
 };       
-
+/*
 window.addEventListener('resize', function() {         // On refresh quand la largeur de l'écran change
     window.location.reload();
-});
+});*/
 
                         /*   Effet de survol de la souris pour changer la couleur du logo et de la police  */
 
